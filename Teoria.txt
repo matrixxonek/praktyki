@@ -1,0 +1,159 @@
+1. VSS jest to technologia Windows, która pozwala na wykonywanie ręcznych lub automatycznych kopii zapasowych lub migawek plików i woluminów nawet, gdy są one używane.
+
+2. Deduplikacja, to eliminowanie powtarzających się bloków danych. Takich, które istnieją już w danym środowisku.
+	-zapewnia oszczędność zasobów dyskowych
+	-rodzaje:
+		*na poziomie systemu plików
+		*na poziomie bloków dyskowych
+
+3. kompresja
+	-bezstratna, z postaci skompresowanej możemy odzyskać identyczną postać pierwiotną
+	pewne rodzaje danych są dla niej bardzo trudne do skompresowania, a nawet niemożliwe
+		Najczęściej używane metody:
+			*słownikowe
+			*statyczne
+	-stratna, odzyskanie postaci pierwotnej jest niemożliwe (usuwanie przez koder-dekoder mniej istotnych danych dla zmysłów człowieka)
+		Najczęściej dotyczy:
+			*obraz
+			*wideo
+			*dźwięk
+
+	Stopnie kompresji
+		stosunek wielkości danych cyfrowych przed kompresją do ich wielkości po kompresji
+		-stratna ma największy stopień kompresji
+		-bezstratna proporcjonalnie mniejszy stopień kompresji
+
+4. Szyfrowanie danych
+Symetryczne:
+	AES:
+	- blokowy szyfr symetryczny
+	-klucz 128 - 9 rund szyfrujących, 192 - 11 rund, 256b - 13 rund szyfrujących
+	-zlalety:
+		*darmowy
+		*niskie wymagania sprzętowe
+		*wymagana mała pojemność pamięci
+	ECB:
+	-Jest to najprostszy sposób szyfrowania. Odbywa się przy pomocy klucza. Każdy z bloków wiadomości jest kodowany oddzielnie. Podobnie, każdy blok szyfrogramu jest również deszyfrowany oddzielnie.
+	-zalety:
+		*szyfrowanie i deszyfrowanie przy pomocy wielu wątków równocześnie
+	CBC:
+	-Polega on na dodawaniu XOR każdego kolejnego bloku tekstu jawnego do poprzednio otrzymanego bloku szyfrogramu. Dopiero wynik tego działania jest szyfrowany w zwykły sposób.
+	-wada:
+		*przy pomocy tylko jednego wątku równocześnie
+	
+Klucz domyślny i klucz użytkownika:
+	-klucz domyślny nie jest znany użytkownikowi i jest zapisany w bazie danych serwera
+	-klucz użytkownika jest znany tylko i wyłącznie użytkownikowi 
+		*wyższe bezpieczeństwo
+		*ryzyko utraty klucza
+
+5. Retencja danych
+	-rutynowe zatrzymywanie danych dotyczących komunikacji(najczęściej dotyczy rodo)
+6. Kopia zapasowa:
+	-pełna, kopiuje wszystkie zasoby 
+		*najwięcej miejsca
+		*najdłużej
+		*najprostrzy do odtworzenia
+	-różnicowa, kopiuje dane, które zsotały zmienione lub dodane od ostatniej kopii
+		*mało miejsca
+		*krótko
+		*prosty w odtworzeniu
+	-przyrostowa, kopiuje dane, które zsotały zmienione lub dodane od ostatniej kopii, nie kumuluje nowych i zmodyfikowanych plików, bazuje tylko na poprzedniej kopii
+		*najmniej miejsca
+		*najszybszy
+		*najcięższe przywrócenie
+
+7. Dla większości typów kopii zapasowej (poza VHD, SystemState oraz Lokalizacji sieciowych) wystarczy przy tworzeniu projektu wejść do zakładki Zaawansowane, zaznaczyć opcję "Wykonaj backup na prawach użytkownika Windows" i wpisać dane administratora systemu.
+
+8. jej wartość ustawiana jest poza programem, składa się ona z nazwy oraz wartości
+
+ 
+9. Harmonogram - umożliwia tworzenie automatycznie wykonywanych zadań
+
+10. Plik ukryty - podczas zwykłego wyświetlania listy plików jest on niewidoczny
+
+11. Filtry plików - umożliwiają określenie, które pliki i foldery mają zostać pominięte podczas tworzenia kopii zapasowej
+
+12. Usługa systemowa stanowi właściwy silnik backupu, jest odpowiedzialna za wykonywanie backupów oraz synchronizację danych. Aplikacja kliencka nie musi być uruchomiona dla prawidłowego działania usługi. 
+
+13. Active directory - usługa katalogowa (hierarchiczna baza danych)
+
+14. Wirtualizacja - symulowanie przez oprogramowanie istnienia zasobów logicznych
+
+15. Redundancja - nadmiarowość, 
+
+16. Chmura - sieć zdalnych serwerów przechowujących dane i pozwalających na zarządzanie nimi, niezależnie od używanego urządzenia
+
+17. NAS - dysk sieciowy
+
+18. QNAP, Synology, Asustor, Netgear, Mono - firmy
+
+19.  Mono - Mono jest implementacją open source Microsoft .NET Framework opartą na standardach ECMA dla C#
+
+20. Kontrola wersji - https://pl.wikipedia.org/wiki/System_kontroli_wersji
+
+21. Docker, Kubernetes - wirtualizacja systemu operacyjnego
+
+22. 
+
+23. Klaster - podstawowa jednostka przechowywania danych w systemie plików, składająca się z jednego lub kilku sektorów nośnika
+
+24. Centra danych - budynki, pomieszczenia do przechowywania infrastruktury baz danych
+
+25. RAID – sposób wykorzystania w systemie komputerowym dwóch lub większej liczby dysków twardych, w którym dyski te współpracują między sobą
+https://macierze-netapp.pl/technologie/rodzaje-raid.html
+
+26. Systemy plików - https://klinikadanych.pl/artykuly/popularne-systemow-plikow
+
+27. Rejestr systemu - baza danych, którą system operacyjny Windows używa do przechowywania informacji o konfiguracji komputera
+
+28. Foldery systemowe
+	-windows: /windows
+	-linux: /etc
+
+29. Amazon Web Service (S3, EC2), Azure - platformy chmurowe, udostępniają one mechanizmy pozwalające przetwarzać dane, a także je składowac
+
+30. OpenStack - chmura obliczeniowa, działa zgodnie z API Amazon EC2
+
+31. Linki symboliczne - specjalny rodzaj pliku, który podobnie jak „zwykły skrót” wskazuje na inny plik lub katalog. Główna różnica polega na tym, że większość programów traktuje taki „link” nie jako „skrót”, a tak jakby wskazany plik/katalog faktycznie znajdował się w tym miejscu.
+
+32. Hiberfil.sys, Pagefile.sys i Swapfile.sys
+	-odpowiada za wprowadzanie komputera w stan hibernacji
+	-zastępuje część RAMU, zazwyczaj najmniej używane pliki pamięci RAM są zapisywane właśnie w tym pliku.
+	-plik wymiany służący do aplikacji ze sklepu z aplikacjami
+
+32. Dziennik zdarzeń - funkcja w systemie Windows do rejestrowania błędów występujących w systemie Windows. W kontekście programisty ważne jest to, że pokazuje błędy aplikacji działających w systemie 
+
+33. Grupa robocza - mała grupa komputerów, które pracują w sieci nie zapewniającej centralnej administracji zasobami.
+
+34. IPv4, IPv6 - IP to protokół komunikacyjny. IPv6 ma zaletę większej ilości dostępnych adresów 
+
+35. MSI, EXE 
+	- msi to baza danych instalatora, zbiór plików, wszystkie dane do instalacji aktualizacji i modyfikacji
+	-exe instalacja i uruchomienie oprogramowania
+
+36. .bat, .sh 
+	-jest plikiem wsadowym systemu Windows, który zawiera sekwencję poleceń systemu Windows/DOS
+	-jest skryptem powłoki uniksowej, który zawiera serię poleceń uniksowych. Nie można ich uruchomić w wierszu poleceń systemu Windows DOS lub Powershell.
+
+37. 
+
+38. Typy plików a rozszerzenia - Po zmianie rozszerzenia format pliku się nie zmieni, więc typ też nie
+
+39. DLL, a EXE - w kontekście .NET przy uruchomieniu exe utworzony zostanie osobny wątek, za to dll jest doładowywany do exe jako “biblioteka”
+https://pl.sawakinome.com/articles/software/difference-between-dll-and-exe-in-net-3.html
+
+40. Procesy, a wątki - wątki są wykonywane w obrębie procesu, w odróżnieniu do procesu wątki nie posiadają niezależnych zasobów. Wątki mogą się komunikować ze sąba w łatwy sposób dzięki temu że są w jednym procesie
+
+41. Wielowątkowość - dzięki niej w jednym procesie możemy wykonywać kilka wątków w jednym czasie
+
+42. Grafika wektorowa a rastrowa -
+	-rastrowa, obraz budowany jest z prostokątnej siatki punktów (z pixeli)
+	-wektorowa, bazuje na równaniach matematycznych, nie traci jakośic w trakcie skalowania w porównaniu do rastrowej
+
+43. Bitlocker - pozwala on chronić dane na dyskach, używa AES
+
+44. HDD, a SSD - Rozróżnia je głównie technologia w której zostały stworzone, HDD działa dzięki talerzom na których są zapisywane dane, za to SSD jest oparty na pamięci Flash
+https://servecom.pl/blog/dysk-hdd-vs-ssd-czym-sie-roznia-jaki-wybrac/
+
+45. BIOS, a UEFI - BIOS wykorzystuje interfejs tekstowy, a UEFI - następca BIOSu, tryb graficzny. Obsługuje on także myszkę.
