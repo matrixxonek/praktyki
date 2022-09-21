@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlienGame", "AlienGame\AlienGame.csproj", "{77F66FED-C39C-4E51-8C51-15AB900FD48D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{77F66FED-C39C-4E51-8C51-15AB900FD48D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77F66FED-C39C-4E51-8C51-15AB900FD48D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77F66FED-C39C-4E51-8C51-15AB900FD48D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77F66FED-C39C-4E51-8C51-15AB900FD48D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A0C678AF-BE85-4D58-A7B6-40B28684C154}
+	EndGlobalSection
+EndGlobal
