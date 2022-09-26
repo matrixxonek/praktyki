@@ -200,6 +200,8 @@ namespace Game2._0
             {
                 Console.WriteLine("koniec gry");
                 drawText.Visibility = Visibility.Visible;
+                winText.Visibility = Visibility.Hidden;
+                defeatText.Visibility = Visibility.Hidden;
             } else if(enemyDead == true)
             {
                 winText.Visibility = Visibility.Visible;
