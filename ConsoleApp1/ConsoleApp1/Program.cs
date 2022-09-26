@@ -31,13 +31,36 @@ List<Chleb> chleby2 = new List<Chleb>()
 Console.WriteLine(list.Count.ToString() + " " + list2.Count + " " + chleby.Count + " " + chleby2.Count);
 Console.ReadKey();
 list.Sort();
-for (int i = 0; i < list.Count; i++)
-    Console.WriteLine(list[i]);
+for (int i = 0; i < chleby.Count; i++)
+    Console.WriteLine(chleby[i] + i.ToString());
 Console.ReadKey();
 chleby.Sort();
 
 for (int i = 0; i < chleby.Count; i++)
     Console.WriteLine(chleby[i].b);
+
+Console.ReadKey();
+Console.WriteLine(list.Count);
+if (list.Contains(2))
+    list.Remove(2);
+list.Sort();
+Console.WriteLine(list.Count);
+
+Console.ReadKey();
+Dictionary<Chleb, string> nazwyChlebow = new Dictionary<Chleb, string>();
+nazwyChlebow.Add(chleby2[0], "bagietka");
+nazwyChlebow.Add(chleby2[1], "hotdog");
+
+Dictionary<string, Chleb> nazwyChlebow2 = new Dictionary<string, Chleb>();
+nazwyChlebow2.Add("bagietka", chleby2[0]);
+nazwyChlebow2.Add("hotdog", chleby2[1]);
+
+if (chleby2.Contains(nazwyChlebow2["bagietka"]))
+{
+    Console.WriteLine("bagietka");
+}
+
+
 class Chleb : IComparable<Chleb>
 {
     public int a;
