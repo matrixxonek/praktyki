@@ -2,7 +2,6 @@
 using System.Text.Json;
 Console.WriteLine("Json file maker");
 string folder = "C:\\Users\\Admin\\Source\\Repos\\praktyki\\jsonApp";
-//StreamReader read = new StreamReader(folder);
 StreamWriter write = new StreamWriter(folder + "\\dane.json");
 var dane = new Dane
 {
@@ -20,7 +19,6 @@ Dane dane2 = JsonSerializer.Deserialize<Dane>(odczytane);
 Console.WriteLine(dane2.liczba);
 Console.WriteLine(dane2.tekst);
 Console.WriteLine(dane2.tekst2);
-//read.Close();
 Console.ReadKey();
 
 public class Dane
